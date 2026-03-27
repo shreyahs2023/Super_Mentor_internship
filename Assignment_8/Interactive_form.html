@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Form</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:40px;
+}
+
+input{
+    display:block;
+    margin:10px 0;
+    padding:8px;
+}
+
+button{
+    padding:10px 20px;
+}
+
+#message{
+    margin-top:15px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>User Registration Form</h2>
+
+<form id="myForm">
+
+<label>Name:</label>
+<input type="text" id="name">
+
+<label>Email:</label>
+<input type="email" id="email">
+
+<label>Password:</label>
+<input type="password" id="password">
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+
+document.getElementById("myForm").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+
+let message = document.getElementById("message");
+
+if(name === "" || email === "" || password === ""){
+    message.style.color = "red";
+    message.textContent = "Error: All fields are required!";
+}
+else if(password.length < 6){
+    message.style.color = "red";
+    message.textContent = "Error: Password must be at least 6 characters.";
+}
+else{
+    message.style.color = "green";
+    message.textContent = "Success! Form submitted successfully.";
+}
+
+});
+
+</script>
+
+</body>
+</html>

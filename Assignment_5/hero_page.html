@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Hero Page</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px;
+    background:#f5f7fa;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    font-size:40px;
+    color:#2c3e50;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin:20px 0;
+}
+
+.hero-text button{
+    padding:12px 25px;
+    border:none;
+    background:#3498db;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.hero img{
+    width:350px;
+}
+
+/* Responsive design for mobile */
+
+@media (max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero img{
+    margin-top:30px;
+    width:250px;
+}
+
+.hero-text h1{
+    font-size:30px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>Welcome to My Website</h1>
+<p>This is a responsive hero section built using Flexbox. It adjusts automatically for mobile screens.</p>
+<button>Learn More</button>
+</div>
+
+<div>
+<img src="hero-image.png" alt="Hero Image">
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+src/
+│
+├── components/
+│   ├── Header.js
+│   ├── Footer.js
+│   └── TaskList.js
+│
+├── pages/
+│   ├── Home.js
+│   ├── About.js
+│
+├── services/
+│   └── api.js
+│
+├── assets/
+│   ├── images/
+│   └── styles/
+│
+├── utils/
+│   └── helpers.js
+│
+└── App.js
